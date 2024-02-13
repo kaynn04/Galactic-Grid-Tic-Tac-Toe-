@@ -28,14 +28,14 @@ if (isset($_SESSION["user"])) {
             $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
             if ($user) {
                 if (password_verify($password, $user["password"])) {
-                    session_start();
-                    $_SESSION["user"] = "yes";
+                    $_SESSION["user"] = $user;
+                    $_SESSION["full_name"] = $user["full_name"];
                     header("Location: index.php");
-                    die();
-                }else{
+                    exit();
+                } else {
                     echo "<div class='alert alert-danger'>Password does not match</div>";
                 }
-            }else{
+            } else {
                 echo "<div class='alert alert-danger'>Email does not match</div>";
             }
         }
