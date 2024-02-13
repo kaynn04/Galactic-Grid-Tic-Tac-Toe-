@@ -1,0 +1,202 @@
+body {
+    background-color: rgb(27, 27, 27);
+    user-select: none;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td {
+	border:  2px solid #ffffff;
+	height:  100px;
+	width:  100px;
+	text-align:  center;
+	vertical-align:  middle;
+	font-family:  Verdana, Geneva, Tahoma, sans-serif;
+	font-size:  70px;
+	cursor: pointer;
+}
+
+.menu {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    margin-top: -20px;
+}
+
+table {
+    width: 100%;
+    max-width: 650px;
+	border-collapse: collapse;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+	top: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px white;
+    background-color: black;
+}
+
+@media (max-width: 767px) {
+    table {
+        margin-left: -150px;
+    }
+}
+
+table tr:first-child td {
+	border-top: 0;
+}
+
+table tr:last-child td {
+	border-bottom: 0;
+}
+
+table tr td:first-child {
+	border-left: 0;
+}
+
+table tr td:last-child {
+	border-right: 0;
+}
+
+.endgame {
+  display: none;
+  width: 200px;
+  top: 400px;
+  background-color: rgb(25, 0, 255);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 50px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em;
+}
+
+button {
+    position: absolute;
+    width: 210px; /* Set a fixed width for the buttons */
+    border: 3px solid rgb(25, 0, 255);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.603);
+    transition: all 0.1s ease-in-out;
+    font-size: 20px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    margin-top: 350px;
+    margin-left: -105px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: crosshair;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    background-color: transparent;
+}
+
+.score {
+    width: 50%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: auto;
+
+    border: 1px solid rgba(0, 128, 0, 0);
+}
+
+
+#player_n{
+    grid-area: one;
+}
+#vs {
+    grid-area: two;
+}
+#ai_n{
+    grid-area: three;
+}
+#player_score{
+    grid-area: four;
+}
+#vs2{
+    grid-area: five;
+}
+#ai_score{
+    grid-area: six;
+}
+
+.score_board {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    grid-template-areas: 
+    'one two three'
+    'four five six';
+    text-align: center;
+    color: white;
+    max-width: 50%;
+    position: fixed;
+    top: 20px; /* Adjust the top position as needed */
+    left: calc(55% - 25%); /* Adjust the left position as needed */
+}
+
+@media (max-width: 1610px) {
+    .score_board {
+        max-width: 90%; /* Adjust the width for smaller screens */
+        left: 50%; /* Center horizontally for smaller screens */
+        top: 10px; /* Adjust the top position as needed */
+        transform: translateX(-50%); /* Center horizontally using transform */
+    }
+}
+
+@media (max-width: 609px) {
+    .score_board {
+        max-width: 90%; /* Adjust the width for smaller screens */
+        left: 50%; /* Center horizontally for smaller screens */
+        top: 10px; /* Adjust the top position as needed */
+        transform: translateX(-50%); /* Center horizontally using transform */
+    }
+}
+
+
+.gri {
+    background-color: rgba(0, 0, 0, 0);
+    width: 250px;
+}
+
+
+.back{
+    position: absolute;
+    width: 200px; /* Set a fixed width for the buttons */
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    margin-top: 350px;
+    margin-left: -90px; /* Adjusted margin for centering */
+    border: 3px solid rgb(25, 0, 255);
+    background-color: rgba(0, 0, 0, 0.603);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: crosshair;
+    transition: all 0.1s ease-in-out;
+}
+
+.back:hover {
+    box-shadow: 0 0 10px 5px white;
+}
+
