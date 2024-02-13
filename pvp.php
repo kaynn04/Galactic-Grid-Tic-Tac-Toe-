@@ -65,7 +65,7 @@
 			<div class="text"></div>
 		</div>
 
-		<button class="ingame_back" onclick="location.href='choose.php'">Back</button>
+		<button class="back" onclick="location.href='choose.php'">Back</button>
 
 		<script src="basePVP.js"></script>
 		<script src="starbg.js" type="module"></script>
