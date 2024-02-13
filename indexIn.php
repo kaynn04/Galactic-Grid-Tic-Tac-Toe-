@@ -13,11 +13,18 @@
 
         <div class="user-dropdown">
             <?php
-                if (isset($_SESSION['fullname'])) {
-                    $fullName = $_SESSION['fullname'];
-                    echo '<p>Hello, <b style="color: rgb(25, 0, 255);">' . $fullName . '!</b></p>';
+                session_start();
+
+                // Check if the user is logged in
+                if (!isset($_SESSION["user"])) {
+                    header("Location: login.php");
+                    exit();
                 }
-            ?>
+
+                // Access user information including full name
+                $fullName = isset($_SESSION["full_name"]) ? $_SESSION["full_name"] : '';
+                ?>
+                <p style="font-size: 20px;">Hello, <b style="color: rgb(25, 0, 255);font-size: 20px;"><?php echo htmlspecialchars($fullName); ?></b><span style="margin-left: 5px">!</span></p>
         </div>
 
         <div class="play">
