@@ -65,7 +65,7 @@ table tr td:last-child {
 .endgame {
   display: none;
   width: 200px;
-  top: 400px;
+  top: 500px;
   background-color: rgb(25, 0, 255);
   position: absolute;
   left: 50%;
@@ -75,25 +75,6 @@ table tr td:last-child {
   border-radius: 5px;
   color: white;
   font-size: 2em;
-}
-
-button {
-    position: absolute;
-    width: 210px; /* Set a fixed width for the buttons */
-    border: 3px solid rgb(25, 0, 255);
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.603);
-    transition: all 0.1s ease-in-out;
-    font-size: 20px;
-    height: 60px;
-    top: 50%;
-    left: 50%;
-    margin-top: 350px;
-    margin-left: -105px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: crosshair;
 }
 
 canvas {
@@ -178,22 +159,23 @@ canvas {
 }
 
 
-.back{
+.back {
     position: absolute;
-    width: 200px; /* Set a fixed width for the buttons */
+    width: 210px; /* Set a fixed width for the buttons */
+    border: 3px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.603);
+    transition: all 0.1s ease-in-out;
+    font-size: 20px;
     height: 60px;
     top: 50%;
     left: 50%;
     margin-top: 350px;
-    margin-left: -90px; /* Adjusted margin for centering */
-    border: 3px solid rgb(25, 0, 255);
-    background-color: rgba(0, 0, 0, 0.603);
-    color: white;
-    border-radius: 10px;
+    margin-left: -105px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: crosshair;
-    transition: all 0.1s ease-in-out;
 }
 
 .back:hover {
