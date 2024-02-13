@@ -12,7 +12,19 @@
         <h2>CHOOSE MODE</h2>
 
         <div class="user-dropdown">
-            <p>Hello, <b style="color: rgb(25, 0, 255);">Username </b>▼</p>
+            <?php
+                session_start();
+
+                // Check if the user is logged in
+                if (!isset($_SESSION["user"])) {
+                    header("Location: login.php");
+                    exit();
+                }
+
+                // Access user information including full name
+                $fullName = isset($_SESSION["full_name"]) ? $_SESSION["full_name"] : '';
+                ?>
+                <p style="font-size: 20px;">Hello, <b style="color: rgb(25, 0, 255);font-size: 20px;"><?php echo htmlspecialchars($fullName); ?></b><span class="arrow" style="margin-left: 10px;">▼</span></p>
             <div class="user-dropdown-content">
                 <a href="logout.php" class="logout-box">Log Out</a>
             </div>
