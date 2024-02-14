@@ -296,25 +296,122 @@ footer {
     color: white;
 }
 
-
-@media(max-width: 700px) {
-    .container {
+@media(max-width: 1629px) {
+    .reg_container {
         max-width: 500px;
-        margin: 250px auto;
+        margin-top: 90px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media(max-width: 1024px) {
+    .log_container {
+        max-width: 800px;
+        margin-top: 180px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .reg_container {
+        max-width: 800px;
+        margin-top: 180px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media(max-width: 870px) {
+    .log_container {
+        max-width: 500px;
+        margin-top: 180px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .reg_container {
+        max-width: 500px;
+        margin-top: 90px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
 @media(max-width: 560px) {
-    .container {
+    .log_container {
         max-width: 400px;
-        margin: 250px auto;
+        margin-top: 180px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .reg_container {
+        max-width: 400px;
+        margin-top: 90px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media(max-width: 540px) {
+    .log_container {
+        max-width: 400px;
+        margin-top: 150px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .reg_container {
+        max-width: 400px;
+        margin-top: 90px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
 @media(max-width: 450px) {
-    .container {
+    .log_container {
         max-width: 300px;
-        margin: 250px auto;
+        margin-top: 180px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
+    }
+    .reg_container {
+        max-width: 300px;
+        margin-top: 130px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
+    }
+}
+
+@media(max-width: 375px) {
+    .log_container {
+        max-width: 300px;
+        margin-top: 95px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .reg_container {
+        max-width: 300px; /* Adjust the max-width as needed for smaller screens */
+        margin: 50px auto; /* Adjust the margin as needed */
+        padding: 20px; /* Adjust the padding as needed */
+    }
+}
+
+@media(max-width: 360px) {
+    .log_container {
+        max-width: 300px;
+        margin-top: 95px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .reg_container {
+        max-width: 300px;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -372,3 +469,5 @@ th {
 .back_history:hover {
     box-shadow: 0 0 10px 5px white;
 }
+
+
