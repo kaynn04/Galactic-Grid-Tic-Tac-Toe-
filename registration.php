@@ -87,8 +87,8 @@ if (isset($_SESSION["user"])) {
         </form>
         <div>
         <div><p class="register" >Already Registered? <a href="login.php">Login Here</a></p></div>
+        <div><p class="register">Just Play as Guest? <a href="choose.php">Lets go!</a></p></div>
       </div>
-      <button class="back_history" onclick="location.href='index.php'">Back</button>
     </div>
 
     <script src="starbg.js" type="module"></script>
