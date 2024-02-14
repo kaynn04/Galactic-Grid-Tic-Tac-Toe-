@@ -12,7 +12,19 @@
 	<body>
 		<canvas id="canvas"></canvas>
 		<div class="score_board">
-			<h2 class="gri" id="player_n">Player</h2>
+			<?php
+			session_start();
+
+			// Check if the user is logged in
+			if (!isset($_SESSION["user"])) {
+				header("Location: login.php");
+				exit();
+			}
+
+			// Access user information including full name
+			$fullName = isset($_SESSION["full_name"]) ? $_SESSION["full_name"] : '';
+			?>
+			<h2 class="gri" id="player_n"><?php echo $fullName; ?></h2>
 			<h1 class="gri" id="vs">VS</h1>
 			<h2 class="gri" id="ai_n">AI</h2>
 			<h1 class="gri" id="player_score">0</h1>
